@@ -1,0 +1,23 @@
+package Representation;
+
+import java.util.Scanner;
+
+public class DecisionNode extends Node {
+    public DecisionNode(int id, String description) {
+        super(id, description);
+    }
+
+    @Override
+    public Node chooseNext() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choisissez une option :");
+        for (int i = 0; i < nextNodes.length; i++) {
+            System.out.println((i+1) + ". " + nextNodes[i].description);
+        }
+        int choice = scanner.nextInt();
+        scanner.close();
+        return nextNodes[choice - 1];
+    }
+
+
+}
