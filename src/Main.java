@@ -12,6 +12,7 @@ public class Main {
         System.out.println("Description : " + luffy.getDescription());
         System.out.println("Points de vie : " + luffy.getPoints());
 
+
         System.out.println("Personnage 2 : " + yamamoto.getNom());
         System.out.println("Description : " + yamamoto.getDescription());
         System.out.println("Points de vie : " + yamamoto.getPoints());
