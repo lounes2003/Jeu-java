@@ -1,21 +1,31 @@
+import java.util.Scanner;
 import Univers.PersonnageDeBase;
-import Univers.Univers;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Que le jeu one piece commence !");
-        // Création des instances des personnages
-        PersonnageDeBase luffy = new PersonnageDeBase("Monkey D. Luffy", "Un jeune pirate plein de fougue et d'espoir avec des techniques plus fortes les unes que les autres", 10);
-        PersonnageDeBase yamamoto = new PersonnageDeBase("Yamamoto", "Une kunoichi déterminée à prouver sa valeur dotée d’une force brute incroyable", 10);
+        System.out.println("Que le jeu One Piece commence !");
 
-        // Utilisation des instances
+        // Demande à l'utilisateur de choisir son sexe
+        System.out.println("Choisissez votre sexe (homme/femme) : ");
 
-        System.out.println("Personnage 1 : " + luffy.getNom());
-        System.out.println("Description : " + luffy.getDescription());
-        System.out.println("Points de vie : " + luffy.getPoints());
+        // Scanner pour récupérer l'entrée de l'utilisateur
+        Scanner scanner = new Scanner(System.in);
+        String sexe = scanner.nextLine();
 
-        System.out.println("Personnage 2 : " + yamamoto.getNom());
-        System.out.println("Description : " + yamamoto.getDescription());
-        System.out.println("Points de vie : " + yamamoto.getPoints());
+        // Création des instances des personnages en fonction du sexe choisi
+        PersonnageDeBase personnage;
+        if (sexe.equalsIgnoreCase("homme")) {
+            personnage = new PersonnageDeBase("Monkey D. Luffy", "Un jeune pirate plein de fougue et d'espoir avec des techniques plus fortes les unes que les autres.");
+        } else {
+            personnage = new PersonnageDeBase("Yamato", "Une kunoichi déterminée à prouver sa valeur dotée d’une force brute incroyable.");
+        }
+
+        // Utilisation de l'instance
+        System.out.println("Personnage : " + personnage.getNom());
+        System.out.println("Description : " + personnage.getDescription());
+        System.out.println("Points : " + personnage.getPoints());
+        // Fermeture du scanner
+        scanner.close();
+        //Suite du scénario ....
     }
 }

@@ -2,12 +2,10 @@ package Univers;
 
 public class Allie {
     private String nom;
-    private String description;
     private int pointsAide;
 
-    public Allie(String nom, String description, int pointsAide) {
+    public Allie(String nom,int pointsAide) {
         this.nom = nom;
-        this.description = description;
         this.pointsAide = pointsAide;
     }
 
@@ -18,14 +16,6 @@ public class Allie {
 
     public void setNom(String nom) {
         this.nom = nom;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public int getPointsAide() {

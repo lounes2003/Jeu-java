@@ -5,10 +5,10 @@ public class PersonnageDeBase {
     private String description;
     private int points;
 
-    public PersonnageDeBase(String nom, String description, int points) {
+    public PersonnageDeBase(String nom, String description) {
         this.nom = nom;
         this.description = description;
-        this.points = points;
+        this.points = 10;
     }
 
     // Getters et setters
