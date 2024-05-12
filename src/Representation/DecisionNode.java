@@ -10,6 +10,14 @@ public class DecisionNode extends Node {
         super(id, description);
     }
 
+    public void setNextNodes(Node[] nextNodes) {
+        this.nextNodes = nextNodes;
+    }
+
+    public Node[] getNextNodes() {
+        return nextNodes;
+    }
+
     @Override
     public Node chooseNext() {
         Scanner scanner = new Scanner(System.in);
