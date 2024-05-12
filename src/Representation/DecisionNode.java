@@ -3,6 +3,9 @@ package Representation;
 import java.util.Scanner;
 
 public class DecisionNode extends Node {
+
+    private Node[] nextNodes;
+
     public DecisionNode(int id, String description) {
         super(id, description);
     }

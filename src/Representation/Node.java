@@ -6,10 +6,19 @@ public abstract class Node {
     protected String description;
     protected Univers univers;
 
+    public Node(){
+
+    }
+
     public Node(int id, String description, Univers univers) {
         this.id = id;
         this.description = description;
         this.univers = univers;
+    }
+
+    public Node(int id, String description){
+        this.id = id;
+        this.description = description;
     }
 
     public abstract Node chooseNext();

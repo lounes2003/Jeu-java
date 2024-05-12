@@ -3,6 +3,9 @@ package Representation;
 import java.util.Random;
 
 public class ChanceNode extends Node{
+
+    private Node[] nextNodes;
+
     public ChanceNode(int id, String description) {
         super(id, description);
     }

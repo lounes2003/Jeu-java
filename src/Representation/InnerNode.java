@@ -1,5 +1,7 @@
 package Representation;
 
+import Univers.Univers;
+
 public class InnerNode extends Node {
     private Node[] nextNodes;
 
@@ -7,6 +9,7 @@ public class InnerNode extends Node {
         super(id, description, univers);
         this.nextNodes = nextNodes;
     }
+
     public InnerNode(Node[] nextNodes) {
         this.nextNodes = nextNodes;
     }
