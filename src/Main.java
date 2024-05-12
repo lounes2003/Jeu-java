@@ -1,4 +1,5 @@
 import Univers.PersonnageDeBase;
+import Univers.Univers;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class Main {
         PersonnageDeBase yamamoto = new PersonnageDeBase("Yamamoto", "Une kunoichi déterminée à prouver sa valeur dotée d’une force brute incroyable", 10);
 
         // Utilisation des instances
+
         System.out.println("Personnage 1 : " + luffy.getNom());
         System.out.println("Description : " + luffy.getDescription());
         System.out.println("Points de vie : " + luffy.getPoints());
