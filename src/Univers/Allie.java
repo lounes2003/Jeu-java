@@ -1,21 +1,11 @@
 package Univers;
 
-public class Allie {
-    private String nom;
+public class Allie extends Personnage {
     private int pointsAide;
 
-    public Allie(String nom,int pointsAide) {
-        this.nom = nom;
+    public Allie(String nom, int pointsAide) {
+        super(nom);
         this.pointsAide = pointsAide;
-    }
-
-    // Getters et setters
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 
     public int getPointsAide() {
@@ -26,4 +16,3 @@ public class Allie {
         this.pointsAide = pointsAide;
     }
 }
-

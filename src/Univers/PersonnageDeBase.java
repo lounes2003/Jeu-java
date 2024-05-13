@@ -1,23 +1,13 @@
 package Univers;
 
-public class PersonnageDeBase {
-    private String nom;
+public class PersonnageDeBase extends Personnage {
     private String description;
     private int points;
 
     public PersonnageDeBase(String nom, String description) {
-        this.nom = nom;
+        super(nom);
         this.description = description;
         this.points = 10;
-    }
-
-    // Getters et setters
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 
     public String getDescription() {
@@ -35,5 +25,4 @@ public class PersonnageDeBase {
     public void setPoints(int points) {
         this.points = points;
     }
-
 }

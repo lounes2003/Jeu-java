@@ -29,6 +29,4 @@ public class DecisionNode extends Node {
         scanner.close();
         return nextNodes[choice - 1];
     }
-
-
 }
