@@ -1,28 +1,23 @@
 package Univers;
 
-public class PersonnageDeBase extends Personnage {
-    private String description;
-    private int points;
+public abstract class PersonnageDeBase {
+    protected int pointsDeVie;
+    protected int force;
 
-    public PersonnageDeBase(String nom, String description) {
-        super(nom);
-        this.description = description;
-        this.points = 10;
+    public PersonnageDeBase(int pointsDeVie, int force) {
+        this.pointsDeVie = pointsDeVie;
+        this.force = force;
     }
 
-    public String getDescription() {
-        return description;
+    public abstract void combattre();
+    public abstract void avancer();
+    public abstract void ouvrir();
+
+    public int getPointsDeVie() {
+        return pointsDeVie;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
+    public int getForce() {
+        return force;
     }
 }

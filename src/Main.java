@@ -1,38 +1,28 @@
-import java.util.Scanner;
-import Univers.PersonnageDeBase;
+import Univers.*;
+import Representation.*;
 
 public class Main {
-
     public static void main(String[] args) {
-        // Début du Jeu
-        System.out.println("Que le jeu One Piece commence !");
+        // Initialisation des personnages
+        PersonnageDeBase naruto = new Allie(100, 50, 20);
+        PersonnageDeBase sakura = new Allie(80, 40, 30);
 
-        // Demande à l'utilisateur de choisir son sexe
+        // Initialisation des énigmes et des clés
+        Enigme enigme1 = new Enigme(
+                "Je suis plus grand que Dieu et plus méchant que le diable. Les riches en ont besoin, les pauvres en ont et si vous le mangez, vous mourrez. Qu'est-ce que c'est ?",
+                new String[]{"1. Rien", "2. Tout", "3. Amour", "4. Haine"}
+        );
 
-        System.out.println("Choisissez votre sexe (homme/femme) : ");
+        Cle cle1 = new Cle("Clé mystique", "Cette clé ouvre une porte vers un trésor caché.", 50);
 
-        // Scanner pour récupérer l'entrée de l'utilisateur
+        // Initialisation des noeuds
+        TerminalNode fin = new TerminalNode(4, "Vous avez atteint la fin de votre aventure.");
+        DecisionNode debut = new DecisionNode(1, "Choisissez votre personnage : \n1. Naruto\n2. Sakura", new Node[]{fin, fin});
 
-        Scanner scanner = new Scanner(System.in);
-        String sexe = scanner.nextLine();
-
-        // Création des instances des personnages en fonction du sexe choisi
-
-        PersonnageDeBase personnage;
-        if (sexe.equalsIgnoreCase("homme")) {
-            personnage = new PersonnageDeBase("Monkey D. Luffy", "Un jeune pirate plein de fougue et d'espoir avec des techniques plus fortes les unes que les autres.");
-        } else {
-            personnage = new PersonnageDeBase("Yamato", "Une kunoichi déterminée à prouver sa valeur dotée d’une force brute incroyable.");
+        // Démarrer le jeu
+        Node currentNode = debut;
+        while (!(currentNode instanceof TerminalNode)) {
+            currentNode.display();
         }
-
-        // Utilisation de l'instance
-        System.out.println("Personnage : " + personnage.getNom());
-        System.out.println("Description : " + personnage.getDescription());
-        System.out.println("Points : " + personnage.getPoints());
-
-        // Fermeture du scanner
-        scanner.close();
-
-        // Suite du scénario ...
     }
 }

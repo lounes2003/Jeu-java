@@ -1,15 +1,17 @@
 package Representation;
 
-import Univers.Univers;
-
 public class TerminalNode extends Node {
-    private TerminalNode terminalNode;
-
-    public TerminalNode(int id, String description, Univers univers) {
-        super(id, description, univers);
+    public TerminalNode(int id, String description) {
+        super(id, description);
     }
 
-    public Node chooseNext(){
-        return terminalNode;
+    @Override
+    public void display() {
+        System.out.println("Fin du jeu : " + description);
+    }
+
+    @Override
+    public Node chooseNext() {
+        return this;
     }
 }

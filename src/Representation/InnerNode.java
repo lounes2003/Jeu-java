@@ -1,31 +1,21 @@
 package Representation;
 
-import Univers.Univers;
-
 public class InnerNode extends Node {
     private Node[] nextNodes;
 
-    public InnerNode(int id, String description, Univers univers ,Node[] nextNodes) {
-        super(id, description, univers);
-        this.nextNodes = nextNodes;
-    }
-
-    public InnerNode(Node[] nextNodes) {
-        this.nextNodes = nextNodes;
-    }
-
-    // Méthode pour obtenir les nœuds connectés
-    public Node[] getNextNodes() {
-        return nextNodes;
-    }
-
-    // Méthode pour définir les nœuds connectés
-    public void setNextNodes(Node[] nextNodes) {
+    public InnerNode(int id, String description, Node[] nextNodes) {
+        super(id, description);
         this.nextNodes = nextNodes;
     }
 
     @Override
+    public void display() {
+        System.out.println(description);
+    }
+
+    @Override
     public Node chooseNext() {
-        return null;
+        // Logique de choix de noeud suivant
+        return nextNodes[0]; // Exemple simplifié
     }
 }

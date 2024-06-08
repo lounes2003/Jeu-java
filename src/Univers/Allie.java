@@ -1,18 +1,37 @@
 package Univers;
 
-public class Allie extends Personnage {
-    private int pointsAide;
+public class Allie extends PersonnageDeBase {
+    private int pointAide;
 
-    public Allie(String nom, int pointsAide) {
-        super(nom);
-        this.pointsAide = pointsAide;
+    public Allie(int pointsDeVie, int force, int pointAide) {
+        super(pointsDeVie, force);
+        this.pointAide = pointAide;
     }
 
-    public int getPointsAide() {
-        return pointsAide;
+    @Override
+    public void combattre() {
+        System.out.println("L'allié combat avec une force de " + force);
     }
 
-    public void setPointsAide(int pointsAide) {
-        this.pointsAide = pointsAide;
+    @Override
+    public void avancer() {
+        System.out.println("L'allié avance.");
+    }
+
+    @Override
+    public void ouvrir() {
+        System.out.println("L'allié ouvre une porte.");
+    }
+
+    public void naviguer() {
+        System.out.println("L'allié navigue.");
+    }
+
+    public void donnerIndice() {
+        System.out.println("L'allié donne un indice.");
+    }
+
+    public int getPointAide() {
+        return pointAide;
     }
 }
